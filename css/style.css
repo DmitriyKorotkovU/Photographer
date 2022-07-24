@@ -1,0 +1,62 @@
+@import "reset.css";
+
+.header {
+}
+.header__body {
+  width: 100%;
+  height: 65px;
+  background-color: black;
+}
+.header__navigator {
+  height: 100%;
+  max-width: 1160px;
+  background-color: black;
+  color: #debf83;
+  margin: 0 auto;
+  display: flex;
+}
+
+.h-leftside {
+  display: flex;
+}
+.h-leftside__icon {
+  max-width: 50px;
+  width: 50px;
+  height: auto;
+  margin: auto;
+}
+.leftside__icon {
+max-width: 100%;
+height: 100%;
+}
+
+.h-centerside {
+  margin:auto 0;
+  width: 100%;  
+  text-align: right;
+}
+.h-centerside__list {
+  
+}
+.h-centerside__list-item {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 16px;
+}
+.h-centerside__link-item {
+ 
+}
+.h-rightside {
+  display: flex;
+  padding: 0 0 0 30px;
+}
+.h-rightside__social-link {
+  max-width: 50px;
+  width: 50px;
+  height: auto;
+  margin: auto;
+}
+.h-social-link {
+  max-width: 100%;
+  height: 100%;
+}
