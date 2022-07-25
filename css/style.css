@@ -87,8 +87,7 @@ height: 100%;
   height: 100vh;
   width: 100%;
   display: flex;
-  overflow: hidden;
-
+  
 }
 .body__title {
   font-family: "VinnytsiaSansBold", Arial, sans-serif;
