@@ -81,7 +81,7 @@ height: 100%;
 
 .backimg {
   
-  background: url(img/background/111.jpg) no-repeat fixed left top;
+  background: url(../img/background/111.jpg) no-repeat fixed left top;
   background-size: cover;
   min-height: 650px;
   height: 100vh;
