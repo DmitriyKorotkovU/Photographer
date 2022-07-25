@@ -109,7 +109,7 @@ height: 100%;
   display: flex;
 }
 .photo__body {
-  width: 80%;
+  max-width: 1160px;
   padding: 100px 20px 10px;
   margin: auto;
   color: #debf83;
