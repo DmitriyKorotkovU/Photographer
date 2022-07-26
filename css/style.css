@@ -24,9 +24,7 @@ html, body {
 }
 
 body{
-  background-color: rgba(0, 0, 0, 0.068);
-  background: black url(../img/background/01.jpg) no-repeat fixed left top;
-  background-size: cover;
+  background-color: rgb(0, 0, 0);
 }
 .header__body {
   width: 100%;
@@ -93,6 +91,8 @@ max-width: 100%;
 }
 
 .body__text {
+  background: black url(../img/background/01.jpg) no-repeat fixed left top;
+  background-size: cover;
   min-height: 650px;
   height: 100vh;
   width: 100%;
@@ -109,7 +109,7 @@ max-width: 100%;
 }
 
 .content {
-  background-color:rgba(0, 0, 0, 0.95);
+  display: block;
 }
 .photo__card {
   width: 100%;
