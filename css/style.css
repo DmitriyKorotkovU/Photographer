@@ -118,6 +118,7 @@ max-width: 100%;
 .photo__body {
   max-width: 1160px;
   width: 100%;
+  height: auto;
   padding: 80px 30px 10px;
   margin: auto;
   color: #debf83;
