@@ -159,6 +159,7 @@ max-width: 100%;
   cursor:crosshair;
   position: relative;
   top:30px;
+  bottom: 0;
 }
 
 .content {
@@ -240,12 +241,13 @@ max-width: 100%;
   .header__burger {
     display: block;
     position: relative;
-    left: 84%;
-    margin: 18px 0;
-    width: 45px;
-    height: 35px;
+    left: 88%;
+    top: 26%;
+    width: 35px;
+    height: 24px;
     cursor: pointer;
     z-index: 3;
+
   }
   .header__navigator {
     position: fixed;
@@ -257,7 +259,7 @@ max-width: 100%;
     transition: all 0.3s ease 0s;
     background-color:black;
     display: block;
-    padding: 60px 0 0 0;
+    padding: 44px 0 0 0;
   }
   .header__navigator.active {
     top: 0%;
@@ -266,9 +268,9 @@ max-width: 100%;
     background-color: #debf83;
     position: absolute;
     width: 100%;
-    height: 6px;
+    height: 4px;
     left: 0;
-    top: 15px;
+    top: 10px;
     transition: all 0.3s ease 0s;
   }
   .header__burger:before,
@@ -277,7 +279,7 @@ max-width: 100%;
     background-color: #debf83;
     position: absolute;
     width: 100%;
-    height: 6px;
+    height: 4px;
     left: 0;
     transition: all 0.3s ease 0s;
   }
@@ -292,11 +294,11 @@ max-width: 100%;
   }
   .header__burger.active:before{
     transform: rotate(45deg);
-    top:15px;
+    top:10px;
   }
   .header__burger.active:after{
     transform: rotate(-45deg);
-    bottom:14px;
+    bottom:10px;
   }
   .h-burger {
     width: 100%;
@@ -317,11 +319,12 @@ max-width: 100%;
     padding: 30px;
   }
   .body__img {
-    background-attachment:scroll;
+    padding-top: 44px;
+    background-attachment: scroll;
   }
   .body__title {
-    position: relative;
-    bottom:150px;
+    position:relative;
+    top: -100px;
   }
 }
 
