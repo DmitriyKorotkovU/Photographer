@@ -13,10 +13,40 @@
 		url('../fonts/caviar_dreams.svg#caviar_dreams') format('svg'); /* Chrome < 4, Legacy iOS */
 }
 
+html, body {
+  height: 100%;
+}
+
 body{
   background-color: rgb(0, 0, 0);
 }
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.header:before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+}
+.header__burger {
+  display: none;
+}
 .header__body {
+  position: relative;
   width: 100%;
   height: 65px;
   background-color: black;
@@ -24,7 +54,6 @@ body{
 .header__navigator {
   height: 100%;
   max-width: 1160px;
-  background-color: black;
   color: #debf83;
   margin: 0 auto;
   display: flex;
@@ -32,6 +61,7 @@ body{
 
 .h-leftside {
   display: flex;
+  z-index: 3;
 }
 .h-leftside__icon {
   max-width: 50px;
@@ -49,6 +79,7 @@ max-width: 100%;
   margin:auto 0;
   width: 100%;  
   text-align: right;
+  z-index: 3;
 }
 
 .h-centerside__list-item {
@@ -61,9 +92,31 @@ max-width: 100%;
   cursor: pointer;
 }
 
+.anim-underline {
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+}
+.anim-underline:after {
+  display: block;
+  content:"";
+  height: 2px;
+  width: 0%;
+  background-color: red;
+  transition: width 0.4s ease-in-out;
+}
+.h-centerside__link-item:hover:after,
+.anim-underline:focus:after {
+  width: 100%;
+}
+.red-underline {
+  border-bottom: solid 2px red;
+}
+
 .h-rightside {
   padding: 0 30px;
   display: flex;
+  z-index: 3;
 }
 .h-rightside__block {
   margin: auto;
@@ -79,6 +132,7 @@ max-width: 100%;
   cursor: pointer;
 }
 .body__img {
+  padding-top: 65px;
   background: black url(../img/background/01.jpg) no-repeat fixed left top; 
   background-size: cover;
   max-height: 700px;
@@ -95,20 +149,22 @@ max-width: 100%;
   color: #debf83;
   text-align: center;
   margin: auto;
+  cursor:crosshair;
 }
 
 .content {
-  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 .photo__card {
-  width: 100vw;
   display: flex;
 }
 .photo__body {
-  max-width: 1160px;
+  max-width: 1050px;
   width: 100%;
   height: auto;
-  padding: 80px 30px 10px;
+  padding: 70px 20px 10px;
   margin: auto;
   color: #debf83;
   text-align: left;
@@ -138,29 +194,101 @@ max-width: 100%;
 
 ::-webkit-scrollbar {width: 0;}
 
-@media screen and (max-width: 950px) {
+
+@media screen and (max-width: 768px) {
+  .body.lock {
+    overflow: hidden;
+  }
   .header__body {
-    height: auto;
+    height: 50px;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    left: 84%;
+    margin: 18px 0;
+    width: 45px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 3;
   }
   .header__navigator {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transition: all 0.3s ease 0s;
+    background-color:black;
     display: block;
+    padding: 60px 0 0 0;
+  }
+  .header__navigator.active {
+    top: 0%;
+  }
+  .header__burger span {
+    background-color: #debf83;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    left: 0;
+    top: 15px;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before,
+  .header__burger::after {
+    content: "";
+    background-color: #debf83;
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger.active span{
+    transform: scale(0);
+  }
+  .header__burger.active:before{
+    transform: rotate(45deg);
+    top:15px;
+  }
+  .header__burger.active:after{
+    transform: rotate(-45deg);
+    bottom:14px;
+  }
+  .h-burger {
+    width: 100%;
+    height: 100%;
   }
   .h-leftside__icon {
     padding: 60px;
+  }
+  .h-centerside {
+    text-align: center;
+  }
+  .h-centerside__list-item {
+    display: block;
+    padding: 20px;
+    font-size: 16px;
+  }
+  .h-rightside {
+    padding: 30px;
+  }
+  .body__img {
+    background-attachment: fixed;
+  }
 }
-.h-centerside {
-  text-align: center;
-}
-.h-centerside__list-item {
-  display: block;
-  padding: 20px;
-  font-size: 16px;
-}
-.h-rightside {
-  padding: 30px;
-}
-.body__img {
-  background-attachment: fixed;
-}
+
+@media screen and (max-height: 400px) {
+  .h-leftside{
+    display: none;
+  }
 }
 
