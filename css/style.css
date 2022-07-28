@@ -157,6 +157,8 @@ max-width: 100%;
   text-align: center;
   margin: auto;
   cursor:crosshair;
+  position: relative;
+  top:30px;
 }
 
 .content {
@@ -316,6 +318,10 @@ max-width: 100%;
   }
   .body__img {
     background-attachment:scroll;
+  }
+  .body__title {
+    position: relative;
+    bottom:150px;
   }
 }
 
