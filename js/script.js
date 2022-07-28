@@ -11,5 +11,4 @@ header__burger.onclick = function(){
 
 header__list.onclick = function () {
     header__list.classList.remove('active');
-    back.classList.toggle('lock');
 }
