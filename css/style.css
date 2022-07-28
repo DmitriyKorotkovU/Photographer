@@ -136,6 +136,8 @@ max-width: 100%;
   letter-spacing: 0.5px;
 }
 
+::-webkit-scrollbar {width: 0;}
+
 @media screen and (max-width: 950px) {
   .header__body {
     height: auto;
