@@ -159,5 +159,8 @@ max-width: 100%;
 .h-rightside {
   padding: 30px;
 }
+.body__img {
+  background-attachment: fixed;
+}
 }
 
