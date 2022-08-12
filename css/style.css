@@ -82,8 +82,9 @@ body{
   cursor: pointer;
 }
 .leftside__icon {
-max-width: 100%;
+  max-width: 100%;
 }
+
 
 .h-centerside {
   margin:auto 0;
@@ -141,6 +142,11 @@ max-width: 100%;
 .h-social-link {
   max-width: 100%;
   cursor: pointer;
+  border-radius: 50%;
+  transition: box-shadow 0.5s ease;
+}
+.h-social-link:hover{
+  box-shadow: 0 0 15px #dec0838c;
 }
 .body__img {
   padding-top: 65px;
@@ -186,8 +192,13 @@ max-width: 100%;
 }
 .c-photo{
   width: 100%;
+  border: 1px solid #dec0838c; 
+  transition: box-shadow 0.5s ease;
+}
+.c-photo:hover{
   box-shadow: 0 0 15px #dec0838c;
 }
+
 .c-text {
   line-height: 25px;
   padding: 15px 0px 40px;
